@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InheritRight Properties - Trusted Kenyan Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .map-container {
+            height: 300px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                height: 80vh;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">InheritRight Properties</a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-green-200 transition">Home</a>
+                <a href="#properties" class="hover:text-green-200 transition">Properties</a>
+                <a href="#about" class="hover:text-green-200 transition">About</a>
+                <a href="#services" class="hover:text-green-200 transition">Services</a>
+                <a href="#contact" class="hover:text-green-200 transition">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-700 px-6 py-2">
+            <a href="#home" class="block py-2 hover:text-green-200 transition">Home</a>
+            <a href="#properties" class="block py-2 hover:text-green-200 transition">Properties</a>
+            <a href="#about" class="block py-2 hover:text-green-200 transition">About</a>
+            <a href="#services" class="block py-2 hover:text-green-200 transition">Services</a>
+            <a href="#contact" class="block py-2 hover:text-green-200 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-white text-center px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">InheritRight Properties</h1>
+            <h2 class="text-xl md:text-2xl font-medium mb-6">Your Trusted Land & Home Partner in Naivasha and Nakuru</h2>
+            <p class="text-lg md:text-xl mb-8">We help families own, inherit, and manage property with ease and trust.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#properties" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition">View Properties</a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-green-800 px-6 py-3 rounded-lg font-medium transition">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Featured Properties</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="property-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1560493676-04071cc5cfe8?ixlib=rb-4.0.3" alt="3-Bedroom Bungalow" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">3-Bedroom Bungalow</h3>
+                        <p class="text-green-700 font-medium mb-2">KSh 5,500,000</p>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-2 text-green-600"></i> Naivasha Town</p>
+                        <p class="text-gray-700 mb-4">Spacious, gated community with clean title deed, ready for immediate occupation</p>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">More Details</button>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="property-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3" alt="Land in Nakuru" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">50x100 Land</h3>
+                        <p class="text-green-700 font-medium mb-2">KSh 750,000</p>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-2 text-green-600"></i> Pipeline, Nakuru</p>
+                        <p class="text-gray-700 mb-4">Prime location ideal for rentals or family home with full ownership and fencing options</p>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">More Details</button>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="property-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3" alt="Rental Units" class="w-full h-60 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Rental Units</h3>
+                        <p class="text-green-700 font-medium mb-2">KSh 20,000/month</p>
+                        <p class="text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-2 text-green-600"></i> Kiamunyi, Nakuru</p>
+                        <p class="text-gray-700 mb-4">Newly built 1 & 2-bedroom apartments with parking, 24hr security and backup water</p>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">More Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition">View More Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3" alt="About InheritRight" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">About InheritRight Properties</h2>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        InheritRight Properties is a family-run real estate business dedicated to helping Kenyans navigate the complex process of buying, selling, and inheriting property. With over 10 years of experience in Naivasha and Nakuru, we've built our reputation on trust, integrity, and results.
+                    </p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        We understand that property transactions can be stressful, which is why we handle every aspect of the process - from initial search to title transfer - with care and professionalism. Our team includes certified agents, lawyers, and surveyors to ensure all transactions are legal and above board.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Whether you're looking for land to build your dream home, rental income property, or need succession transfer support, we're here to guide you every step of the way.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 text-green-800 rounded-full p-3 mr-4">
+                            <i class="fas fa-home text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Our Mission</h4>
+                            <p class="text-sm text-gray-600">Making property ownership accessible, understandable and achievable for every Kenyan family</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-map-marked-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Land Sales</h3>
+                    <p class="text-gray-700">
+                        Freehold and leasehold properties in prime locations with thorough title verification for your peace of mind.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-building text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Rentals</h3>
+                    <p class="text-gray-700">
+                        Quality residential and commercial properties at competitive rates with flexible terms for tenants and landlords.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-file-contract text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Succession Transfer</h3>
+                    <p class="text-gray-700">
+                        Compassionate help with inheritance matters including court processes and family agreements.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-search text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Title Verification</h3>
+                    <p class="text-gray-700">
+                        Comprehensive searches at lands office to confirm genuine title deeds and absence of encumbrances.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Valuation</h3>
+                    <p class="text-gray-700">
+                        Professional property valuation by certified surveyors for sales, loans, succession, and tax purposes.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Property Management</h3>
+                    <p class="text-gray-700">
+                        Full-service management including tenant screening, rent collection, and maintenance coordination.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-green-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Client Testimonials</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-lg p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "InheritRight helped me secure clean land in Nakuru and handled all the paperwork! As someone living abroad, I needed agents I could trust. They provided regular updates and even sent me videos of the property. Truly professional service."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center text-green-800 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Samuel K.</h4>
+                            <p class="text-sm text-gray-600">Land Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-lg p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "After disappointing experiences with other agents, I found InheritRight. They're trustworthy, responsive, and very affordable. They helped our church acquire land in Naivasha and handled all the legal processes with integrity. I highly recommend them."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center text-green-800 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Pastor Wambui</h4>
+                            <p class="text-sm text-gray-600">Church Trustee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Get In Touch</h3>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start mb-4">
+                                <div class="text-green-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p class="text-gray-700">+254 738 080 541</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start mb-4">
+                                <div class="text-green-600 mr-4 mt-1">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">WhatsApp</h4>
+                                    <p class="text-gray-700">+254 738 080 541</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start mb-4">
+                                <div class="text-green-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-700">inheritrightrke@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-green-600 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Office</h4>
+                                    <p class="text-gray-700">Kihoto Plaza, 2nd Floor, Naivasha</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container rounded-lg overflow-hidden shadow">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6622499751493!2d36.43520481475372!3d-0.728799835516046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18290c9e4dec1e5f%3A0x1d4b7f2c2b4b5b5b!2sNaivasha!5e0!3m2!1sen!2ske!4v1630312345678!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Send Us a Message</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email (Optional)</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <select id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                                    <option value="">Select a subject</option>
+                                    <option value="property">Property Inquiry</option>
+                                    <option value="land">Land For Sale</option>
+                                    <option value="rentals">Rentals</option>
+                                    <option value="succession">Succession Transfer</option>
+                                    <option value="valuation">Valuation Services</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">InheritRight Properties</h3>
+                    <p class="text-gray-400 max-w-md">
+                        Your trusted partner for land and home ownership in Naivasha and Nakuru counties. Ethical, professional, and family-focused real estate services.
+                    </p>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-green-400 transition">Home</a></li>
+                        <li><a href="#properties" class="text-gray-400 hover:text-green-400 transition">Properties</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-green-400 transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-green-400 transition">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-green-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://wa.me/254738080541" class="bg-green-600 hover:bg-green-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:inheritrightrke@gmail.com" class="bg-red-600 hover:bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-gray-400">
+                        <p class="mb-1">Opening Hours:</p>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2025 InheritRight Properties. All rights reserved. | Website by <a href="#" class="text-green-400 hover:underline">InheritRight Tech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Whatsapp Button -->
+    <a href="https://wa.me/254738080541" class="fixed bottom-6 right-6 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-700 transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=mariemike/properties" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
